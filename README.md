@@ -6,20 +6,20 @@
 ### Download And Install Requirements
 
 1. Download and install [Python 3](https://www.python.org/downloads/)
-   2. Or an IDE with Python like [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows)
-3. Create a .venv under the ml folder
-   4. PyCharm - configure interpreter and determine the .venv location
-5. Activate the .venv (for windows)
+   1. Or an IDE with Python like [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows)
+2. Create a .venv under the ml folder
+   1. PyCharm - configure interpreter and determine the .venv location
+3. Activate the .venv (for windows)
    ```
        .\.venv\Scripts\activate
    ```
-6. Install the required Python packages with:
+4. Install the required Python packages with:
 
     ```
     pip install -r .\ml\requirements.txt
     ```
 
-### Configure Environemnt
+### Configure Environemnt Variables
 
 1. Create a new file named `.env` in the root directory of the project.
 
@@ -30,11 +30,15 @@
 
 ## Run Data Collection Scripts
 
-- To run the application:
+- To Collect Data Separately:
 
     Open a terminal and run:
 
+  - Dezzer
+    ```
+    python .\ml\src\data_collection\deezer_callect_data.py
+    ```
+  - Spotify
     ```
     python .\ml\src\data_collection\spotify_collect_data.py
-    python .\ml\src\data_collection\deezer_callect_data.py
     ```
