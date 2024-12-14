@@ -1,0 +1,27 @@
+
+# ----- Global ignores -----
+.DS_Store
+node_modules/
+.vscode/
+.idea/
+.env
+
+# ----- Python ignores -----
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+.env/
+*.env
+
+# Build directories
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Compiled Python files
+*.pyo
