@@ -42,11 +42,15 @@
 
     Open a terminal and run:
 
-  - Dezzer
+  - Deezer
     ```
     python .\ml\src\data_collection\deezer_callect_data.py
     ```
   - Spotify
     ```
     python .\ml\src\data_collection\spotify_collect_data.py
+    ```
+  - Google
+    ```
+    python .\ml\src\data_collection\google_collect_data.py
     ```
