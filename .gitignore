@@ -23,5 +23,14 @@ dist/
 *.egg-info/
 .eggs/
 
+# Testing
+*.coverage
+.cache
+.tox/
+.coverage.*
+nosetests.xml
+coverage.xml
+*.pytest_cache/
+
 # Compiled Python files
 *.pyo
