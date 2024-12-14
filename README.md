@@ -7,14 +7,22 @@
 
 1. Download and install [Python 3](https://www.python.org/downloads/)
    1. Or an IDE with Python like [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows)
-2. Create a .venv under the ml folder
+2. Create a venv under the ml folder
    1. PyCharm - configure interpreter and determine the .venv location
-3. Activate the .venv (for windows)
-   ```
-       .\.venv\Scripts\activate
-   ```
+   2. Or create venv using terminal 
+      ```
+      python -m venv myenv
+      ```
+3. Activate the .venv
+   1. for Windows
+      ```
+          .\.venv\Scripts\activate
+      ```
+   2. for macOS/Linux
+      ```
+          source myenv/bin/activate
+      ```
 4. Install the required Python packages with:
-
     ```
     pip install -r .\ml\requirements.txt
     ```
