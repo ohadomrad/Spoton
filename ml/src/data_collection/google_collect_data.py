@@ -38,7 +38,7 @@ def fetch_track_data(track_name):
                 'artist_name': track_info['artists'][0]['name'],
                 'album_title': track_info['album']['name'] if 'album' in track_info else None,
                 'duration': track_info['duration'],
-                'video_id': video_id,
+                # 'video_id': video_id,
                 'is_explicit': track_info.get('isExplicit', False),
                 'view_count': int(stats.get('viewCount', 0)),
                 'like_count': int(stats.get('likeCount', 0)),
@@ -47,16 +47,17 @@ def fetch_track_data(track_name):
             return data
     return None
 
-# Collect data for each track
-dataset = []
-for track_name in track_names:
-    data = fetch_track_data(track_name)
-    if data:
-        dataset.append(data)
+def build_dataset():
+    # Collect data for each track
+    dataset = []
+    for track_name in track_names:
+        data = fetch_track_data(track_name)
+        if data:
+            dataset.append(data)
 
-# Convert to DataFrame
-df = pd.DataFrame(dataset)
-print(df)
+    # Convert to DataFrame
+    df = pd.DataFrame(dataset)
+    return df
 
 # Save to CSV
 #df.to_csv('ytmusic_tracks.csv', index=False)

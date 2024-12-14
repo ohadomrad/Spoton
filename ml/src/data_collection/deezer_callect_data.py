@@ -14,11 +14,11 @@ def fetch_track_data(track_name):
         # Assume the first result is the desired track
         track = search_results[0]
         data = {
-            'track_id': track.id,
+            #'track_id': track.id,
             'track_title': track.title,
-            'artist_name': track.artist.name,
-            'album_title': track.album.title,
-            'duration': track.duration,
+            #'artist_name': track.artist.name,
+            #'album_title': track.album.title,
+            #'duration': track.duration,
             'explicit_lyrics': track.explicit_lyrics,
             'rank': track.rank,
             'release_date': track.release_date,
@@ -32,15 +32,17 @@ def fetch_track_data(track_name):
 
 
 # Collect data for each track
-dataset = []
-for track_name in track_names:
-    data = fetch_track_data(track_name)
-    if data:
-        dataset.append(data)
+def build_dataset():
+    dataset = []
+    for track_name in track_names:
+        data = fetch_track_data(track_name)
+        if data:
+            dataset.append(data)
 
-# Convert to DataFrame
-df = pd.DataFrame(dataset)
-print(df)
+    # Convert to DataFrame
+    df = pd.DataFrame(dataset)
+    return df
+
 
 # Save to CSV
 # df.to_csv('deezer_tracks.csv', index=False)
