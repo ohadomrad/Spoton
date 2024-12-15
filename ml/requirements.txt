@@ -4,3 +4,4 @@ python-dotenv
 deezer-python
 ytmusicapi
 google-api-python-client
+requests
